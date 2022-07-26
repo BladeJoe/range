@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1">
+    <meta name='description' content=''>
+    <meta name="preload">
+    <title></title>
+</head>
+
+<body>
+
+    <div class="slidecontainer">
+        Enter your phone number
+        <input type="range" min="900000000" max="999999999" value="20" class="slider" id="myRange">
+        <h1 id="demo"></h1>
+    </div>
+    <style type="text/css">
+        .slidecontainer {
+            width: 100%;
+            text-align: center;
+        }
+
+        .slider {
+            appearance: none;
+            width: 100%;
+            height: 10px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 10px;
+            background: #a0a0a0;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+
+</html>
